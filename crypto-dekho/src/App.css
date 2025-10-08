@@ -1,0 +1,302 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    /* background-color: rgb(46, 45, 45); */
+}
+
+.App{
+    background-color: rgb(231, 231, 233);
+}
+
+#page-body{
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 64px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header{
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+    height: 50px;
+    background-color: white;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 50px;
+    width: 210px;
+}
+
+.crypto-btn-container{
+    margin: 10px 5px 5px 5px;
+    padding-left: 80px;
+    display: inline;
+    align-items: center;
+}
+
+.crypto-btn{
+    border: 0.5px solid black;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.nav-items > ul {
+    font-size: 24px;
+    display: flex;
+    list-style-type: none;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.nav-items > ul > li {
+    list-style-type: none;
+    padding: 10px 15px;
+}
+
+.signin-btn-container{
+    display: flex;
+    align-items: center;
+    margin: 2px 2px 2px 2px;
+    padding-left: 10px;
+    width: 65px;
+    
+}
+
+.signin-btn{
+    height: 30px;
+    width: 70px;
+    padding-top: 4px;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.home-page{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.header1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 45px;
+}
+.header2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 36px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.header3{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+    /* font-weight: 600; */
+    margin-left: 180px;
+    /* margin-right: 100px; */
+}
+
+.home-header{
+    /* border:0.5px solid black; */
+    margin-left: 180px;
+    margin-right: 120px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.fa-fa-bars{
+    display: flex;
+    justify-content: space-between; /* or center, flex-start, etc. */
+    align-items: center; 
+    margin-left: 580px;
+}
+.box{
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    margin:10px 0px 5px 5px;
+    border-radius: 10px;
+    border: black solid 1px;
+    font-size: 20px;
+    background-color: rgb(163, 255, 163);
+}
+.box1{
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    margin:10px 0px 5px 5px;
+    border-radius: 10px;
+    border: black solid 1px;
+    font-size: 20px;
+    background-color: rgb(163, 255, 163);
+}
+.box2{
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    margin:10px 0px 5px 5px;
+    border-radius: 10px;
+    border: black solid 1px;
+    font-size: 20px;
+    background-color: rgb(255, 97, 97);
+}
+
+.fa-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-whatchlist{
+    margin: 0 0 0px 50px;
+}
+.vol-text{
+    font-weight: bold;
+    
+}
+.search-container{
+    margin-left: 580px;
+    height: 50px;
+    width: 300px;
+    gap: 10px;
+    border-radius: 10px;
+}
+.search-input
+{
+    height: 30px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.search-btn{
+    height: 30px;
+    width: 80px;
+    padding-top: 4px;
+    border: 0.5px solid black;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.theme-btn-container{
+    display: flex;
+    align-items: center;
+    margin: 2px 2px 2px 2px;
+    padding-left: 10px;
+    width: 65px;   
+}
+.theme-btn{
+    height: 30px;
+    width: 70px;
+    padding-top: 4px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+}
+
+/* App.css */
+
+
+
+h1 {
+    color: forestgreen;
+}
+
+input {
+    padding-left: 5px;
+    font-size: 20px;
+    width: 250px;
+    height: 30px;
+}
+
+table {
+    width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+
+thead {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    text-align: center;
+}
+
+
+tbody>tr {
+    text-align: center;
+}
+
+.rank {
+    text-align: center;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10%;
+    gap: 10px;
+}
+
+.symbol {
+    text-align: center;
+}
+
+.coin-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+thead td {
+  background-color: #333;
+  color: white;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+tbody td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-header{
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 2px solid black;
+}
