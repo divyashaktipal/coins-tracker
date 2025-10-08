@@ -1,7 +1,38 @@
-/* General App Styling */
-/* .App {
-  background-color: rgb(231, 231, 233);
-} */
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+/* Root Theme Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #f5f5f5;
+  --btn-bg: #333333;
+  --btn-text: #ffffff;
+  --font-family: 'Nunito Sans', sans-serif;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --header-bg: #1f1f1f;
+  --btn-bg: #ffffff;
+  --btn-text: #121212;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
 
 #page-body {
   max-width: 700px;
@@ -9,117 +40,93 @@
   padding-top: 64px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-/* Header */
+/* Header/Navbar */
 .header {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
-  padding: 5px;
-  height: 50px;
-  background-color: white;
+  align-items: center;
+  padding: 0 1rem;
+  height: 60px;
+  background-color: var(--header-bg);
+  font-size: 1rem;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .logo {
-  height: 50px;
-  width: 210px;
-}
-
-/* Default Light Mode */
-body {
-  background-color: #ffffff;
-  color: #000000;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Dark Mode */
-body.dark-mode {
-  background-color: #121212;
-  color: #f5f5f5;
-}
-
-/* Optional: Adjust header and buttons */
-.header {
-  background-color: #f5f5f5;
-}
-body.dark-mode .header {
-  background-color: #1f1f1f;
-}
-
-.theme-btn {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  padding: 6px 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-body.dark-mode .theme-btn {
-  background-color: white;
-  color: black;
-}
-
-
-.crypto-btn-container {
-  margin: 10px 5px 5px 5px;
-  padding-left: 80px;
-  display: inline;
-  align-items: center;
-}
-
-.crypto-btn {
-  border: 0.5px solid black;
-  border-radius: 15px;
-  background-color: white;
-  color: black;
-}
-
-.nav-items {
   display: flex;
   align-items: center;
-  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.crypto-btn-container {
+  display: flex;
+  align-items: center;
 }
 
 .nav-items > ul {
-  font-size: 24px;
-  display: flex;
-  list-style-type: none;
-  margin-left: auto;
-  padding-right: 20px;
-}
-
-.nav-items > ul > li {
-  padding: 10px 15px;
-}
-
-.signin-btn-container,
-.theme-btn-container {
   display: flex;
   align-items: center;
-  margin: 2px;
-  padding-left: 10px;
-  width: 65px;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-.signin-btn,
+.nav-items > ul > li,
+.USD-btn,
+.login,
+.signup-btn,
 .theme-btn {
+  font-size: 1rem;
+  /* color: var(--text-color); */
+}
+
+/* Buttons */
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.signup-btn-container,
+.theme-btn-container,
+.crypto-btn-container {
+  display: flex;
+  align-items: center;
+}
+
+/* USD Selector */
+.USD-btn-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  padding: 0 8px;
   height: 30px;
-  width: 70px;
-  padding-top: 4px;
-  border: 0.5px solid black;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
 
 /* Home Page */
@@ -218,15 +225,6 @@ body.dark-mode .theme-btn {
   font-size: 16px;
 }
 
-.search-btn {
-  height: 30px;
-  width: 80px;
-  border: 0.5px solid black;
-  border-radius: 15px;
-  background-color: black;
-  color: white;
-}
-
 /* Table Styling */
 .table-header {
   margin: 2rem auto;
@@ -261,13 +259,6 @@ tbody tr:hover {
   font-weight: bold;
 }
 
-.logo {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 10%;
-  gap: 10px;
-}
-
 .symbol {
   text-align: center;
 }
@@ -283,22 +274,32 @@ tbody tr:hover {
 .footer {
   text-align: center;
   padding: 1rem;
-  background-color: #f5f5f5;
+  background-color: var(--header-bg);
   font-size: 0.9rem;
   margin-top: 2rem;
 }
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
-  .header1, .header2 {
-    font-size: 1.5rem;
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
   }
 
-  .header3 {
-    font-size: 1rem;
+  .logo-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .fa-fa-bars {
+  .nav-items > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .fa-fa-bars,
+  .search-container {
     flex-direction: column;
     align-items: center;
   }
@@ -309,30 +310,11 @@ tbody tr:hover {
     font-size: 1rem;
   }
 
-  .search-container {
-    flex-direction: column;
-    width: 90%;
-    margin: 1rem auto;
-  }
-
   .search-input {
     width: 100%;
   }
 
-  .table-header {
-    margin: 0;
-  }
-
   table {
     font-size: 0.85rem;
-  }
-
-  .fa-search {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .fa-crypto-btn, .fa-whatchlist {
-    margin: 0.5rem 0;
   }
 }

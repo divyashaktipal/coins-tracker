@@ -7,6 +7,8 @@ import AboutUs from "./components/AboutUs";
 import NavBar from "./components/NavBar";
 import HomePage from "./components/HomePage";
 import Contact from "./components/Contact";
+import LoginPage from "./components/LoginPage";
+import SignUpPage from "./components/SignUpPage";
 
 function App() {
   return (
@@ -21,6 +23,18 @@ function App() {
               path="/"
               element={<HomePage />}
               errorElement={<h1> Page Not Found!!!</h1>}
+            />
+
+            <Route
+              path="/login"
+              element={<LoginPage />}
+              errorElement={<h1>Page Not Found!!!</h1>}
+            />
+
+            <Route
+              path="/signup"
+              element={<SignUpPage />}
+              errorElement={<h1>Page Not Found!!!</h1>}
             />
 
             <Route
