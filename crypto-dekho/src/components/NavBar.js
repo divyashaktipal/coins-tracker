@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import { LOGO_URL } from "../utils/constant";
 
 const NavBar = () => {
+  const toggleTheme = () => {
+    document.body.classList.toggle("dark-mode");
+  };
+
   return (
     <>
       <div className="header">
@@ -28,8 +32,8 @@ const NavBar = () => {
               <button className="signin-btn">Sign in</button>
             </div>
             <div className="theme-btn-container">
-              <button className="theme-btn" script="theme()">
-                Theme
+              <button className="theme-btn" onClick={toggleTheme}>
+                Toggle Theme
               </button>
             </div>
           </ul>
