@@ -112,7 +112,16 @@ button:hover {
   display: flex;
   align-items: center;
 }
-
+.signup{
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 30px;
+  width: 70px;
+  padding-left: 14px;
+  /* padding-right: 5px; */
+  display: flex;
+  align-items: center;
+}
 /* USD Selector */
 .USD-btn-container {
   display: flex;
@@ -173,7 +182,8 @@ button:hover {
   width: 250px;
   height: 100px;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
+  background-color: rgb(50, 215, 75, .1);
   border: black solid 1px;
   font-size: 20px;
   transition: all 0.3s ease;

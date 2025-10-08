@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import mockcoindatas from "../utils/coinsdata";
+import formatCurrency from "../utils/formatCurrency";
 
 const HomePage = () => {
   // const { rank, name, symbol, marketCap, price, availableSupply, volume } =
@@ -67,40 +68,40 @@ const HomePage = () => {
           <h2 className="header2">Today's Crypto Prices by Market Cap</h2>
           <p className="header3">
             The worldwide cryptocurrency market capitalization today stands at
-            an estimated $4.4T , seeing a 1.65% movement over the last 24 hours.
-            The total cryptocurrency trading volume in the past day is roughly
-            $212B. Bitcoin's market dominance is at about 55.8%.
+            an estimated $4.4T , seeing a{" "}
+            {`${Math.abs(parseFloat(marketData.marketCapChange))}`}% movement
+            over the last 24 hours. The total cryptocurrency trading volume in
+            the past day is roughly{" "}
+            {formatCurrency(parseFloat(marketData.volume))}. Bitcoin's market
+            dominance is at about{" "}
+            {`${Math.round(parseFloat(marketData.btcDominance))}`}%.
           </p>
         </div>
         <div className="fa-fa-bars">
-          <div className="fa-fa-cols">
-            <div className="fa-fa-rows">
-              <button className="box">
-                <p className="vol-text">Market Cap</p>
-                <strong>
-                  ${" "}
-                  {marketData && marketData.marketCap
-                    ? marketData.marketCap.toLocaleString()
-                    : "Loading"}
-                </strong>
-              </button>
+          <button className="box">
+            <p className="vol-text">Market Cap</p>
+            <strong>
+              ${" "}
+              {marketData && marketData.marketCap
+                ? marketData.marketCap.toLocaleString()
+                : "Loading"}
+            </strong>
+          </button>
 
-              <button className="box1">
-                <p className="vol-text">Volume 24hrs</p>{" "}
-                <strong>
-                  ${" "}
-                  {marketData && marketData.volume
-                    ? marketData.volume.toLocaleString()
-                    : "Loading"}
-                </strong>
-              </button>
+          <button className="box1">
+            <p className="vol-text">Volume 24hrs</p>{" "}
+            <strong>
+              ${" "}
+              {marketData && marketData.volume
+                ? marketData.volume.toLocaleString()
+                : "Loading"}
+            </strong>
+          </button>
 
-              <button className="box2">
-                <p className="vol-text">BTC Dominance</p>
-                {marketData.btcDominance}%
-              </button>
-            </div>
-          </div>
+          <button className="box2">
+            <p className="vol-text">BTC Dominance</p>
+            {marketData.btcDominance}%
+          </button>
         </div>
 
         {/* Seach Button */}
@@ -179,7 +180,7 @@ const HomePage = () => {
           </table>
         </div>
       </div>
-      <div className="footer">@2025|made by Divyashakti Pal</div>
+      <div className="footer">@2025 | made by Divyashakti Pal</div>
     </>
   );
 };

@@ -38,11 +38,11 @@ const NavBar = () => {
                 <div className="login">Login</div>
               </Link>
             </div>
-            <div className="signup-btn-container">
-              <Link to="/signup">
+            <Link to="/signup">
+              <div className="signup-btn-container">
                 <div className="signup">Sign Up</div>
-              </Link>
-            </div>
+              </div>
+            </Link>
             <div className="theme-btn-container">
               <button className="theme-btn" onClick={toggleTheme}>
                 {"</>"}
