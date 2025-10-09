@@ -1,11 +1,18 @@
+import { useState } from "react";
+import "../css/Navbar.css";
 import { Link } from "react-router-dom";
-import { CiBitcoin } from "react-icons/ci";
 import LoginPage from "./LoginPage";
 import SignUpPage from "./SignUpPage";
+import Menu from "./Menu";
+import * as icons from "react-icons/md";
+import { CiBitcoin } from "react-icons/ci";
 
 const NavBar = () => {
+  const [showToggle, setShowToggle] = useState(false);
+
   const toggleTheme = () => {
     document.body.classList.toggle("dark-mode");
+    setShowToggle((prev) => !prev);
   };
 
   return (
@@ -20,35 +27,44 @@ const NavBar = () => {
             </h3>
           </Link>
         </div>
-        {/* <div className="crypto-btn-container">
+        <div className="crypto-btn-container">
           <button className="crypto-btn">Cryptocurrencies</button>
-        </div> */}
+        </div>
+
         <div className="nav-items">
           <ul>
-            <div className="USD-btn-container">
+            <li className="USD-btn-container">
               <img src="usLogo.png" className="flag" alt="USD" />
               <div className="USD-btn">USD</div>
-            </div>
-            <div className="line-container">
+            </li>
+            <li className="line-container">
               <div className="line">|</div>
-            </div>
-
-            <div className="login-btn-container">
+            </li>
+            <li className="login-btn-container">
               <Link to="/login">
                 <div className="login">Login</div>
               </Link>
-            </div>
-            <Link to="/signup">
-              <div className="signup-btn-container">
-                <div className="signup">Sign Up</div>
-              </div>
-            </Link>
-            <div className="theme-btn-container">
+            </li>
+            <li>
+              <Link to="/signup">
+                <div className="signup-btn-container">
+                  <div className="signup">Sign Up</div>
+                </div>
+              </Link>
+            </li>
+            <li className="theme-btn-container">
               <button className="theme-btn" onClick={toggleTheme}>
-                {"</>"}
+                {showToggle ? (
+                  <icons.MdOutlineDarkMode />
+                ) : (
+                  <icons.MdDarkMode />
+                )}
               </button>
-            </div>
+            </li>
           </ul>
+          <div className="menu">
+            <Menu />
+          </div>
         </div>
       </div>
     </>

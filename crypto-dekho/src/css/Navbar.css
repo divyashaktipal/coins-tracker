@@ -1,0 +1,175 @@
+/* Header/Navbar */
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: var(--header-bg);
+  font-size: 1rem;
+  z-index: 100;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Crypto Button */
+.crypto-btn-container {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.crypto-btn {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  height: 30px;
+  background-color: #2e2b2b;
+  color: white;
+  padding: 0 12px;
+}
+
+/* Nav Items */
+.nav-items {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.nav-items > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-items > ul > li {
+  display: flex;
+  align-items: center;
+}
+
+/* USD Selector */
+.USD-btn-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  padding: 0 8px;
+  height: 30px;
+}
+
+.flag {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+/* Login & Signup */
+.login-btn-container,
+.signup-btn-container {
+  display: flex;
+  align-items: center;
+}
+
+.login {
+  padding: 6px 12px;
+}
+
+.signup {
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 30px;
+  width: 70px;
+  padding-left: 14px;
+  display: flex;
+  align-items: center;
+}
+
+/* Theme Toggle */
+.theme-btn-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Buttons */
+button {
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 10px;
+  padding: 6px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .logo-container {
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 1rem;
+  }
+
+  .crypto-btn-container {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .nav-items {
+    width: 100%;
+  }
+
+  .nav-items > ul {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .nav-items > ul > li {
+    width: 100%;
+  }
+
+  .crypto-btn,
+  .login,
+  .signup,
+  .USD-btn,
+  .theme-btn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .signup {
+    justify-content: flex-start;
+  }
+}

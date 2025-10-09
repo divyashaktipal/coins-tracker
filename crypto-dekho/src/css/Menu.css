@@ -1,0 +1,84 @@
+
+/* Sidebar container */
+.nav-menu {
+  position: fixed; 
+  top: 60px; 
+  right: -300px; 
+  width: 300px; 
+  height: 100vh; 
+  background-color: black;  
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15); 
+  transition: right 0.3s ease-in-out; 
+  z-index: 1000; 
+  border-radius: 8px 0 0 8px; 
+  overflow-y: auto; 
+}
+
+
+.nav-menu.active {
+  right: 0; 
+}
+
+.menu-bars {
+  position: fixed; 
+  top: 15px; 
+  right: 20px; 
+  z-index: 1100; 
+}
+
+.menu-btn {
+  background-color: rgb(102, 99, 99);
+  border: none; 
+  /* padding: 6px;  */
+  border-radius: 10%; 
+  cursor: pointer; 
+}
+
+.nav-menu-items {
+  list-style: none; 
+  padding: 20px; 
+  margin: 0; 
+}
+
+/* Individual menu item */
+.nav-menu-items li {
+  padding: 12px 16px; 
+  margin-bottom: 10px; 
+  border-radius: 6px; 
+  transition: background 0.2s ease;
+}
+
+/* Hover effect for menu items */
+.nav-menu-items li:hover {
+  background-color: #6e6a6a; 
+}
+
+/* Link styling inside menu items */
+.nav-menu-items a {
+  text-decoration: none; 
+  color: #f0f0f0; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+/* Optional: Close icon styling */
+.menu-bars .cg-close {
+  font-size: 1.5rem; 
+  color: #333; 
+}
+
+@media screen and (max-width: 768px) {
+.nav-menu {
+    width: 100%; 
+    border-radius: 0; 
+  }
+
+  .menu-btn {
+    padding: 8px; 
+  }
+
+  .nav-menu-items li {
+    font-size: 0.9rem; 
+  }
+}
